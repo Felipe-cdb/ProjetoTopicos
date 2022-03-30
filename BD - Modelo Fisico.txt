@@ -1,0 +1,144 @@
+create database if not exists  VendasTv;
+use VendasTv;
+
+create table Funcionario(
+	incricao int auto_increment not null,
+    nome varchar(50) not null,
+    salario float,
+    primary key(incricao)
+);
+
+create table Venda(
+	id_venda int auto_increment not null,
+    incricao_func int not null,
+    tipo_tv varchar(3) not null,
+    preco float,
+    primary key(id_venda),
+    foreign key(incricao_func) references Funcionario(incricao)
+);
+
+-- Inserindo dados em funcionario
+insert into Funcionario (nome,salario)
+values("Joao Kleber",1200);
+insert into Funcionario (nome,salario)
+values("Mario Cortez",1200);
+insert into Funcionario (nome,salario)
+values("Angela Lima",2000);
+insert into Funcionario (nome,salario)
+values("Carla Miranda",980);
+insert into Funcionario (nome,salario)
+values("Robson Alenca",1200);
+insert into Funcionario (nome,salario)
+values("Wandson Soares",2300);
+insert into Funcionario (nome,salario)
+values("Ana Julia",2300);
+insert into Funcionario (nome,salario)
+values("Julio Felix",1500);
+insert into Funcionario (nome,salario)
+values("Aline Smit",4500);
+
+-- Inserindo dados em Venda
+insert into Venda (incricao_func,tipo_tv,preco)
+values("1","LCD",875.40);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("1","LCD",1820.50);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("1","LED",1500);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("2","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("2","LCD",750);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1200);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",980);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",2350);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LED",2054);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LED",1300);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LED",1300);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LED",1300);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LED",1300);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LED",1300);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LED",1300);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("3","LCD",1000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("4","LED",1200);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("5","LCD",2350);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("5","LCD",2350);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("5","LCD",2350);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("6","LCD",2350);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("6","LED",2000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("6","LED",2000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("7","LED",2000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("7","LED",2000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("8","LED",2500);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("9","LED",2000);
+insert into Venda (incricao_func,tipo_tv,preco)
+values("9","LCD",1000);
+
+
+
+select * from funcionario where incricao = 8;
+select * from venda
+where incricao_func=5 And tipo_tv="LCD";
